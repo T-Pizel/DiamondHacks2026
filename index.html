@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COMMPASS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<!-- Announcement Bar -->
+
+    <div class="opening">
+        <div class="title">
+            <h1 style="font-size: 70px; color: rgb(48, 50, 49)">
+                Comm<span class="title-color">Pass</span>
+            </h1>
+        </div>
+        
+        <div class="slogan">
+            <h4>Finding Common Ground Within Our Communities</h4>
+        </div>
+        <div class="caption">
+            <p>Discover environmental data and nearby educational resources for your<br>California community — all in one place.</p>
+        </div>
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input 
+                type="text" 
+                id="userZip"
+                inputmode="numeric" 
+                pattern="[0-9]*"
+                maxlength="5"
+                class="rounded-textbox"
+                placeholder="Enter your ZIP code"
+            />
+                <button type="button" id="userButton" class="rounded-button" disabled>
+                    Explore <i class="fa-solid fa-arrow-right"></i>
+                </button>
+        </div>
+        <p style="font-size: 14px; color: #525252; font-style: italic;">Hint: Try 90201, 91402, 95941, 96022, 90021, etc</p>
+    </div>
+
+<!--Community Resources Section-->
+    <section class="resources-section" aria-labelledby="resources-heading">
+        <div class="resources-inner">
+            <header class="resources-head">
+                <p class="resources-eyebrow">Explore</p>
+                <h2 id="resources-heading">Resources</h2>
+                <p class="resources-section-caption">Ways to learn, connect, and support your California community.</p>
+            </header>
+            <div class="resources">
+                <article class="resource-item resource-card resource-card--insights">
+                    <div class="resource-card-accent" aria-hidden="true"></div>
+                    <div class="icon ci">
+                        <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+                    </div>
+                    <h3>Community Insights</h3>
+                    <p>Understand environmental burdens in your neighborhood with clear, accessible data.</p>
+                </article>
+                <article class="resource-item resource-card resource-card--map">
+                    <div class="resource-card-accent" aria-hidden="true"></div>
+                    <div class="icon rm">
+                        <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+                    </div>
+                    <h3>Resource Map</h3>
+                    <p>Find libraries, Wi-Fi spots, tutoring, and tech access near you.</p>
+                </article>
+                <article class="resource-item resource-card resource-card--voice">
+                    <div class="resource-card-accent" aria-hidden="true"></div>
+                    <div class="icon cv">
+                        <i class="fa-solid fa-users" aria-hidden="true"></i>
+                    </div>
+                    <h3>Community Voice</h3>
+                    <p>Share and discover resources from your neighbors.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+<!--UC Links Section-->
+    <section class="uclinks-section" aria-labelledby="uclinks-heading">
+        <div class="uclinks-inner">
+            <header class="uclinks-head">
+                <h2 id="uclinks-heading"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> UC Links</h2>
+                <p>UC Links is a University of California network connecting university students with K-12 youth in<br>
+                    underserved communities. Through after-school programs, digital literacy workshops, and mentoring, UC<br>
+                    Links bridges the gap between higher education and the communities that need it most.
+                </p>
+            </header>
+
+            <div class="uclinks-carousel" data-interval-ms="5000" aria-roledescription="carousel" aria-label="Photos of learning and community programs">
+                <div class="uclinks-carousel-viewport">
+                    <div class="uclinks-carousel-slides">
+                        <figure class="uclinks-slide is-active">
+                            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f048e8?w=1200&q=80" alt="Young adults studying together at a table with notebooks" width="1200" height="675" loading="eager" decoding="async">
+                        </figure>
+                        <figure class="uclinks-slide">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&q=80" alt="Diverse college students smiling in a campus hallway" width="1200" height="675" loading="lazy" decoding="async">
+                        </figure>
+                        <figure class="uclinks-slide">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&q=80" alt="Elementary students raising hands in a bright classroom" width="1200" height="675" loading="lazy" decoding="async">
+                        </figure>
+                        <figure class="uclinks-slide">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1aeb2f99c609?w=1200&q=80" alt="Graduates tossing caps in the air outdoors" width="1200" height="675" loading="lazy" decoding="async">
+                        </figure>
+                        <figure class="uclinks-slide">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200&q=80" alt="Team collaborating around a laptop in a modern workspace" width="1200" height="675" loading="lazy" decoding="async">
+                        </figure>
+                        <figure class="uclinks-slide">
+                            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&q=80" alt="Open books stacked on a wooden desk by a window" width="1200" height="675" loading="lazy" decoding="async">
+                        </figure>
+                        <figure class="uclinks-slide">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80" alt="Students with laptops in a lecture or workshop setting" width="1200" height="675" loading="lazy" decoding="async">
+                        </figure>
+                        <figure class="uclinks-slide">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200&q=80" alt="Person writing notes while studying with coffee nearby" width="1200" height="675" loading="lazy" decoding="async">
+                        </figure>
+                    </div>
+                </div>
+                <div class="uclinks-carousel-dots" role="tablist" aria-label="Choose photo">
+                    <button type="button" class="uclinks-carousel-dot is-active" role="tab" aria-selected="true" aria-label="Photo 1 of 8"></button>
+                    <button type="button" class="uclinks-carousel-dot" role="tab" aria-selected="false" aria-label="Photo 2 of 8"></button>
+                    <button type="button" class="uclinks-carousel-dot" role="tab" aria-selected="false" aria-label="Photo 3 of 8"></button>
+                    <button type="button" class="uclinks-carousel-dot" role="tab" aria-selected="false" aria-label="Photo 4 of 8"></button>
+                    <button type="button" class="uclinks-carousel-dot" role="tab" aria-selected="false" aria-label="Photo 5 of 8"></button>
+                    <button type="button" class="uclinks-carousel-dot" role="tab" aria-selected="false" aria-label="Photo 6 of 8"></button>
+                    <button type="button" class="uclinks-carousel-dot" role="tab" aria-selected="false" aria-label="Photo 7 of 8"></button>
+                    <button type="button" class="uclinks-carousel-dot" role="tab" aria-selected="false" aria-label="Photo 8 of 8"></button>
+                </div>
+            </div>
+
+            <ul class="uclinks-list" id="uclinksList">
+                <li class="uclinks-item">
+                    <a class="uclinks-program-btn" href="https://uclinks.berkeley.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC Links — Official home</span>
+                        <span class="uclinks-program-summary">Main hub for the University-Community Links network connecting UC and CSU campuses with California communities.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item">
+                    <a class="uclinks-program-btn" href="https://uclinks.berkeley.edu/programs" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">Programs across California</span>
+                        <span class="uclinks-program-summary">Browse literacy labs, maker programs, after-school sites, and civic learning initiatives statewide.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item">
+                    <a class="uclinks-program-btn" href="https://uclinks.berkeley.edu/about-us/who-we-serve" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">Who we serve</span>
+                        <span class="uclinks-program-summary">K–12 students, families, undergrad volunteers, and partner schools in historically underserved regions.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item">
+                    <a class="uclinks-program-btn" href="https://uclinks.berkeley.edu/about-us/who-we-are" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">Who we are</span>
+                        <span class="uclinks-program-summary">Faculty, students, and community partners building lasting ties between universities and local neighborhoods.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item">
+                    <a class="uclinks-program-btn" href="https://lchc.ucsd.edu/uclinks.org/people/map_main.html" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC Links site network map</span>
+                        <span class="uclinks-program-summary">Explore where UC Links programs operate and how campuses partner with schools and organizations.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item">
+                    <a class="uclinks-program-btn" href="https://palprogram.ucsd.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC San Diego — Partners at Learning</span>
+                        <span class="uclinks-program-summary">Field experiences and service that link UCSD undergraduates with youth, families, and community programs.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://www.cbleducation.org/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UCSB — Community Based Literacies</span>
+                        <span class="uclinks-program-summary">Collaborative research and practice centered on multilingual, multicultural literacy with local youth and educators.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://www.lceg.org/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">La Colonia de Eden Gardens</span>
+                        <span class="uclinks-program-summary">Community organization in Solana Beach partnering on youth programs, including La Clase Mágica with UC San Diego.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://citiesandschools.berkeley.edu/programs/y-plan" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">Y-PLAN (Center for Cities + Schools)</span>
+                        <span class="uclinks-program-summary">Youth-led civic learning where students work with cities and schools on real neighborhood challenges.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://elp.calstate.edu/centers-programs/capp" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">California Academic Partnership Program</span>
+                        <span class="uclinks-program-summary">CSU-led partnerships that strengthen pathways from high school through college across the state.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://bse.berkeley.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">Berkeley School of Education</span>
+                        <span class="uclinks-program-summary">UC Berkeley’s school of education for teacher preparation, leadership, and equity-focused scholarship.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://education.ucdavis.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC Davis School of Education</span>
+                        <span class="uclinks-program-summary">Programs and research connecting campus to schools, including maker and community-engaged learning.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://education.uci.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC Irvine School of Education</span>
+                        <span class="uclinks-program-summary">Teacher education and outreach such as CASE and community-based after-school and summer learning.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://education.ucsb.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UCSB Gevirtz Graduate School of Education</span>
+                        <span class="uclinks-program-summary">Graduate programs and research in education, psychology, and counseling with strong community ties.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://education.ucsd.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC San Diego Education Studies</span>
+                        <span class="uclinks-program-summary">Department focused on teaching, learning, and social context—including partnerships with local youth programs.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://education.ucsc.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC Santa Cruz Education Department</span>
+                        <span class="uclinks-program-summary">Undergraduate and graduate pathways in education with bilingual and community-engaged emphases.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://education.ucr.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">UC Riverside School of Education</span>
+                        <span class="uclinks-program-summary">Credentials, leadership programs, and research aimed at equitable outcomes in Inland Empire schools.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+                <li class="uclinks-item uclinks-item--extra" hidden>
+                    <a class="uclinks-program-btn" href="https://www.whittier.edu/" target="_blank" rel="noopener noreferrer">
+                        <span class="uclinks-program-name">Whittier College</span>
+                        <span class="uclinks-program-summary">Liberal arts college with community engagement, including Fifth Dimension literacy and digital learning programs.</span>
+                        <span class="uclinks-program-action">Open site <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="uclinks-more-btn" id="uclinksShowMore" aria-expanded="false" aria-controls="uclinksList">
+                Show more
+            </button>
+        </div>
+    </section>
+
+<!--Why This Matters Section-->
+    <section class="wtm-section">
+        <div class="wtm-inner">
+            <header class="wtm-head">
+                <h2><i class="fa-regular fa-heart"></i> Why This Matters</h2>
+                <p>In California, the communities most burdened by pollution are often the same ones with the<br>
+                    least access to quality education, technology, and support services. This isn't a coincidence —<br>
+                    it's a pattern rooted in decades of disinvestment.
+                </p>
+                <p><b>CommPass</b> exists to make the invisible visible. By mapping environmental data alongside<br>
+                    community resources, we empower residents to advocate for themselves and connect to the<br>
+                    support they deserve.
+                </p>
+            </header>
+        </div>
+    </section>
+
+<!--Where Do We Get Our Data? Section-->
+    <section class="data-section">
+        <div class="data-inner">
+            <header class="data-head">
+                <h2><i class="fa-solid fa-database"></i> Where Do We Get Our Data?</h2>
+                <p>Our environmental data comes from <b>CalEnviroScreen 5.0</b>, a tool developed by the California<br>
+                    Office of Environmental Health Hazard Assessment (OEHHA). It identifies communities most<br>
+                    affected by pollution and vulnerability using 21 indicators across pollution burden and population<br>
+                    characteristics.
+                </p>
+            </header>
+        </div>
+    </section>
+
+<!--Footer-->
+    <footer>
+        <h2>CommPass</h2>
+        <p>Finding Common Ground Within Our Communities 💛</p>
+    </footer>
+</body>
+</html>
